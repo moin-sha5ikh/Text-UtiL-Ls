@@ -6,16 +6,18 @@ import './App.css';
 import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import Textform from './components/Textform';
-import About from './components/About';
+// import About from './components/About';
+
 // --------React Router Import-------------------
 // Upgrade the syntax and replace “Switch” with “Routes” and “component” with “element’
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
   
-} from "react-router-dom";
+  
+// } from "react-router-dom";
 
 
 function App() {
@@ -50,27 +52,31 @@ const showAlert=(message)=>{
 return (
   <>
   
-  <Router>
+  {/* ?<Router Basename="/Text UtiL-Ls"> */}
      <Navbar title="Text UtiL-Ls"  aboutText="About Us" mode={Mode} toggleMode={toggleMode}/>
      <Alert alert={allert}/> 
      {/* upr jo (alert=)<== yeh Alert.js me pass hoga props me */}
      <div className="container my-3" >
-     <Routes>
-          <Route exact path="/about"
-          element={<About/>}/>
+     {/* <Routes> */}
+          {/* <Route exact path="/about" */}
+          {/* element={ */}
+          {/* <About/> */}
+          {/* }/> */}
                        
        
           
-          <Route exact path="/"
-          element={<Textform  showAlert={showAlert} heading="Enter the text to Analyze" mode={Mode}/>} />
+          {/* <Route exact path="/" */}
+          {/* element={ */}
+            <Textform  showAlert={showAlert} heading="Enter the text to Analyze" mode={Mode}/>
+            {/* } /> */}
                  
        
-    </Routes>
+    {/* </Routes> */}
      
      </div>
      
   
-     </Router>   
+     {/* </Router>    */}
   </>
   
 );
